@@ -209,12 +209,12 @@ enumdef:
 	KEYWORD_TYPEDEF LEFT_SQUARE_BRACKET KEYWORD_PUBLIC COMMA KEYWORD_V1ENUM RIGHT_SQUARE_BRACKET KEYWORD_ENUM optional_identifier LEFT_BRACKET enumbody RIGHT_BRACKET IDENTIFIER SEMICOLON
 	{
 	  IDL_AddEnumDef($8, $12);
-	  enum_current_val = 1;
+	  enum_current_val = 0;
 	}
 	| KEYWORD_TYPEDEF LEFT_SQUARE_BRACKET KEYWORD_PUBLIC RIGHT_SQUARE_BRACKET KEYWORD_ENUM optional_identifier LEFT_BRACKET enumbody RIGHT_BRACKET IDENTIFIER SEMICOLON
 	{
 	  IDL_AddEnumDef($6, $10);
-	  enum_current_val = 1;
+	  enum_current_val = 0;
 	}
 	;
 
